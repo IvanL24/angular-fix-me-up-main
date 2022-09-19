@@ -1,0 +1,26 @@
+<h1>Account Summary</h1>
+<!-- TODO: 6. Angular ngFor, refactor, and bonus points -->
+<!-- TODO: 7. Accessibility, table markup, form control -->
+<div class="account-summary">
+  <section>
+    <table>
+      <tr>
+        <th scope="col">Account Name</th>
+        <th scope="col">Balance</th>
+        <th scope="col">
+          <label>Account Type</label>
+          <!-- Ivan: converted multiple option to one using ngFor -->
+          <select [(ngModel)]="accountsFilter">
+            <option *ngFor="let choices of options" value="{{choices.value}}">{{ choices.name }}</option>
+          </select>
+        </th>
+      </tr>
+      <tr *ngFor="let account of filterAccounts(accounts)">
+        <!-- TODO: 8. route to detail view -->
+        <td><a href="/account/{{account.id}}">{{account.id}}</a></td>
+        <td>{{account.balance}}</td>
+        <td>{{account.currency}}</td>
+      </tr>
+    </table>
+  </section>
+</div>
