@@ -20,6 +20,7 @@ export class AccountDetailsComponent implements OnInit {
     }
 
     getOne(){
+      // instatiate id that will store needed data
       const id = this.route.snapshot.params["id"];
       console.log(id);
       const balance = this.accountService.getDetails(id);
