@@ -17,3 +17,10 @@
  12 something's off with this include
  13 Angular (NX) Architecture
  14 fix the deprecation
+
+ notes:
+ Testing: not sure how to do it, ask about it
+ scss deprecation: does not show any deprecation, did i miss something?
+ transfers page: is there a hidden file that contains transactions for each id of do I just display details from account overview by id?
+ links: why is  only the  last link that has an offset?
+ @include link: are we supposed to use @use of @import? @import fixed some of the problem while @use does not.
