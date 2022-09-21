@@ -8,16 +8,19 @@
         <th scope="col">Account Name</th>
         <th scope="col">Balance</th>
         <th scope="col">
-          <label>Account Type</label>
+          <!-- Ivan: select tag inside form -->
           <!-- Ivan: converted multiple option to one using ngFor -->
-          <select [(ngModel)]="accountsFilter">
-            <option *ngFor="let choices of options" value="{{choices.value}}">{{ choices.name }}</option>
-          </select>
+          <form>
+            <label>Account Type</label>
+            <select [(ngModel)]="accountsFilter" name="accountsFilter">
+              <option *ngFor="let choices of options" value="{{choices.value}}">{{ choices.name }}</option>
+            </select>
+          </form>
         </th>
       </tr>
       <tr *ngFor="let account of filterAccounts(accounts)">
         <!-- TODO: 8. route to detail view -->
-        <td><a href="/account/{{account.id}}">{{account.id}}</a></td>
+        <td><a [routerLink]="['/account/' + account.id]">{{account.id}}</a></td>
         <td>{{account.balance}}</td>
         <td>{{account.currency}}</td>
       </tr>

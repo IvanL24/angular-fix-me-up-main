@@ -1,6 +1,8 @@
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { ComponentFixture, fakeAsync, flush, TestBed } from '@angular/core/testing';
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { Account } from 'libs/shared/services/src/lib/account';
+import { AccountService } from 'libs/shared/services/src/lib/account.service';
+import { filter } from 'rxjs';
 import { AccountSummaryComponent } from './account-summary.component';
 
 // TODO: 9. Topics in this file: Angular Unit Testing w/ Jest

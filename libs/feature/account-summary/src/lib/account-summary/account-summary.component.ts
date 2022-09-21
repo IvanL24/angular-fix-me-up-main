@@ -3,8 +3,7 @@
  * TODO: 10. Asynchronous Programming (RxJS)
  * TODO: 13. Angular (NX) Architecture
 */
-import { Component, NgModule, OnInit } from '@angular/core';
-// import { FormsModule } from '@angular/forms';
+import { Component, NgModule, OnInit, ɵCurrencyIndex } from '@angular/core';
 import { Account } from 'libs/shared/services/src/lib/account';
 import { AccountService } from 'libs/shared/services/src/lib/account.service';
 import { Observable, of } from 'rxjs';
@@ -15,16 +14,9 @@ import { Observable, of } from 'rxjs';
   styleUrls: ['./account-summary.component.scss'],
 })
 
-// @NgModule ({
-//   declarations:[AccountService],
-//   imports: [FormsModule],
-//   providers:[],
-//   bootstrap: [AppComponent]
-// })
-
 export class AccountSummaryComponent implements OnInit {
   accounts$: Observable<Account[]> = of([]);
-  constructor(private accountService: AccountService) {}
+  constructor(private accountService: AccountService) {};
   accounts: Account[] = [];
   accountsFilter = '';
   
@@ -36,6 +28,7 @@ export class AccountSummaryComponent implements OnInit {
     this.accountService.getAccounts().subscribe((accounts) => {
       this.accounts = accounts;
     });
+    console.log(this.filterAccounts);
   }
 
   filterAccounts(accounts: Account[]) {
