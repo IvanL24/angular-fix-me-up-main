@@ -7,7 +7,6 @@ import { Account } from './account';
   providedIn: 'root'
 })
 export class AccountService {
-  route: any;
   getAccounts(): Observable<Account[]> {
     const accounts: Account[] = [
       { id: "1234", balance: 7500, currency: "cad" },
@@ -17,7 +16,8 @@ export class AccountService {
     return of(accounts);
   }
 
-  getOne(id:string){
+  // Ivan: added new method to get data using id
+  getDetails(id:string){
     const accounts: Account[] = [
       { id: "1234", balance: 7500, currency: "cad" },
       { id: "1235", balance: 4500, currency: "cad" },
