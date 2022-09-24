@@ -1,8 +1,8 @@
 <h1>Account Details</h1>
-    <label>new id</label>
+    <label>Search Account ID: </label><br>
     <input type="text" id="search" value="">
     <button (click)="getValue()">search</button>
-<p>Account ID: {{accounts.id}}</p>
-<p>Account balance: {{accounts.balance}}</p>
-<p>Account Type: {{accounts.currency}}</p>
+<p>Account ID: <span>{{accounts.id}}</span></p>
+<p>Account balance: <span>{{accounts.balance}}</span></p>
+<p>Account Type: <span>{{accounts.currency}}</span></p>
 <!-- TODO: how to retrieve account id and other account details in this route? -->

@@ -1,6 +1,7 @@
 import { AccountSummaryComponent } from '@angular-anim/feature/account-summary';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forRoot(routes),
   ],
   declarations: [],

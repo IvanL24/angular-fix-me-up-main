@@ -1,7 +1,8 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit,  NgModule } from '@angular/core';
 import { AccountService } from 'libs/shared/services/src/lib/account.service';
 import { ActivatedRoute } from '@angular/router';
+import { Account } from 'libs/shared/services/src/lib/account';
 
 @Component({
   selector: 'angular-anim-account-details',
@@ -10,22 +11,22 @@ import { ActivatedRoute } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
-export class AccountDetailsComponent implements OnInit {
-  accounts: any;
-
+export class AccountDetailsComponent implements OnInit{
+  accounts:any;
+  id = '';
+  accountsArr:Account[] = []
   constructor(private route:ActivatedRoute, private accountService:AccountService){}
 
   ngOnInit(){
-    this.getOne();
-    }
+    // instatiate id that will store needed data
+    this.id = this.route.snapshot.params["id"];
+    this.accounts = this.accountService.getDetails(this.id);
 
-    getOne(){
-      // instatiate id that will store needed data
-      const id = this.route.snapshot.params["id"];
-      console.log(id);
-      const balance = this.accountService.getDetails(id);
-      console.log(balance);
-      this.accounts = this.accountService.getDetails(id);
-    }
+  }
 
+  getValue(){
+    const value = (<HTMLInputElement>document.getElementById('search')).value;
+    console.log(value);
+    this.accounts = this.accountService.getDetails(value);
+  }
 }

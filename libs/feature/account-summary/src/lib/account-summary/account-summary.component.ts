@@ -1,5 +1,5 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
-/** 
+/**
  * TODO: 10. Asynchronous Programming (RxJS)
  * TODO: 13. Angular (NX) Architecture
 */
@@ -19,7 +19,7 @@ export class AccountSummaryComponent implements OnInit {
   constructor(private accountService: AccountService) {};
   accounts: Account[] = [];
   accountsFilter = '';
-  
+
   options=[ {name:'None', value:''},
             {name:'CAD', value:'cad'},
             {name:'USD', value:'usd'}];
@@ -27,6 +27,7 @@ export class AccountSummaryComponent implements OnInit {
   ngOnInit(): void {
     this.accountService.getAccounts().subscribe((accounts) => {
       this.accounts = accounts;
+      console.log(accounts.length)
     });
     console.log(this.filterAccounts);
   }
