@@ -1,5 +1,5 @@
 # angular-fix-me-up-main
- Code assessment using Angular and Next
+ * Code assessment using Angular and Next
 
  TODOs:
  1 the header (footer) needs to run flush to the top (bottom) and sides
