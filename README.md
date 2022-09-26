@@ -28,6 +28,7 @@
  ## need help with:
  - other ways to get id for account details page.
  - create a method to check if id exists in array of objects.
+ - testing
 
  ## to be fixed:
  - id retrieval for transfer page
