@@ -1,7 +1,7 @@
-# angular-fix-me-up-main
- * Code assessment using Angular and Next
+# Angular-fix-me-up-main
+ # Code assessment using Angular and Next
 
- ** TODOs:
+ ## TODOs:
  1 the header (footer) needs to run flush to the top (bottom) and sides
  2 We've setup these routes and have them on the page but they aren't working
  3 Use Semantic HTML properly, what's wrong with this usage of main
@@ -18,16 +18,16 @@
  13 Angular (NX) Architecture
  14 fix the deprecation
 
- ** notes:
+ ## notes:
  -- Testing: not sure how to do it, ask about it
  -- scss deprecation: does not show any deprecation, did i miss something?
  -- transfers page: is there a hidden file that contains transactions for each id of do I just display details from account overview by id?
  -- links: why is  only the  last link that has an offset?
  -- @include link: are we supposed to use @use of @import? @import fixed some of the problem while @use does not.
  
- ** need help with:
+ ## need help with:
  -- other ways to get id for account details page.
  -- create a method to check if id exists in array of objects.
 
- ** to be fixed:
+ ## to be fixed:
  -- id retrieval for transfer page
